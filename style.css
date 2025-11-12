@@ -5,35 +5,35 @@
 
 :root {
     /* Colors - Light Mode */
-    --bg-primary: #FFFFFF;
-    --bg-secondary: #F5F5F5;
+    --bg-primary: #FAFAFA;
+    --bg-secondary: #F0F0F0;
     --bg-card: #FFFFFF;
-    --text-primary: #000000;
-    --text-secondary: #333333;
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
 
     /* Neo-Brutalist Accent Colors */
-    --accent-yellow: #FFEB3B;
-    --accent-cyan: #00E5FF;
-    --accent-pink: #FF006E;
-    --accent-lime: #CCFF00;
-    --accent-purple: #B026FF;
-    --accent-orange: #FF6B35;
+    --accent-yellow: #FFD54F;
+    --accent-cyan: #4DD0E1;
+    --accent-pink: #F06292;
+    --accent-lime: #D4E157;
+    --accent-purple: #BA68C8;
+    --accent-orange: #FF8A65;
 
     /* Primary accent */
     --accent: var(--accent-yellow);
     --accent-hover: var(--accent-cyan);
 
     /* Borders & Shadows */
-    --border-color: #000000;
-    --border-width: 4px;
-    --shadow-offset: 6px;
+    --border-color: #2A2A2A;
+    --border-width: 3px;
+    --shadow-offset: 5px;
 
     /* Typography */
     --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
-    /* Spacing - WIDER LAYOUT */
-    --container-width: 1400px;
-    --post-width: 900px;
+    /* Spacing - MUCH WIDER LAYOUT (80-85% of viewport) */
+    --container-width: 85%;
+    --post-width: 75%;
 
     /* Transitions */
     --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,12 +41,12 @@
 
 /* Dark Mode Variables */
 body.dark-mode {
-    --bg-primary: #0A0A0A;
-    --bg-secondary: #1A1A1A;
-    --bg-card: #1A1A1A;
-    --text-primary: #FFFFFF;
-    --text-secondary: #CCCCCC;
-    --border-color: #FFFFFF;
+    --bg-primary: #1A1A1A;
+    --bg-secondary: #2A2A2A;
+    --bg-card: #252525;
+    --text-primary: #E8E8E8;
+    --text-secondary: #B0B0B0;
+    --border-color: #D0D0D0;
 }
 
 /* ========================================
@@ -75,7 +75,7 @@ body {
 
 ::selection {
     background-color: var(--accent-yellow);
-    color: #000000;
+    color: var(--text-primary);
 }
 
 /* ========================================
@@ -96,7 +96,7 @@ h1 {
     border: var(--border-width) solid var(--border-color);
     padding: 1rem 2rem;
     background-color: var(--accent-yellow);
-    color: #000000;
+    color: var(--text-primary);
     display: inline-block;
     box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
     margin-bottom: 2rem;
@@ -135,15 +135,15 @@ a {
 
 a:hover {
     background-color: var(--accent-yellow);
-    color: #000000;
-    text-decoration-color: #000000;
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
 }
 
 code {
     font-family: var(--font-mono);
     font-size: 0.95em;
     background-color: var(--accent-lime);
-    color: #000000;
+    color: var(--text-primary);
     padding: 0.3em 0.6em;
     border: 2px solid var(--border-color);
     font-weight: 600;
@@ -182,13 +182,15 @@ blockquote {
    Utilities
    ======================================== */
 .container {
-    max-width: var(--container-width);
+    width: var(--container-width);
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 3rem;
 }
 
 .container-post {
-    max-width: var(--post-width);
+    width: var(--post-width);
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 3rem;
 }
@@ -296,7 +298,7 @@ blockquote {
 
 .btn-portfolio:hover {
     background-color: var(--accent-yellow);
-    color: #000000;
+    color: var(--text-primary);
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 var(--border-color);
 }
@@ -318,7 +320,7 @@ blockquote {
 
 .back-link:hover {
     background-color: var(--accent-lime);
-    color: #000000;
+    color: var(--text-primary);
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 var(--border-color);
 }
@@ -340,7 +342,7 @@ blockquote {
     border: var(--border-width) solid var(--border-color);
     padding: 2rem 3rem;
     background-color: var(--accent-yellow);
-    color: #000000;
+    color: var(--text-primary);
     display: inline-block;
     box-shadow: 12px 12px 0 var(--border-color);
 }
@@ -401,7 +403,7 @@ blockquote {
 
 .tag.active {
     background-color: var(--accent-yellow);
-    color: #000000;
+    color: var(--text-primary);
 }
 
 .search-section {
@@ -494,13 +496,12 @@ blockquote {
 
 .article-date {
     font-size: 0.85rem;
-    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
     font-weight: 700;
     background-color: var(--accent-yellow);
-    color: #000000;
+    color: var(--text-primary);
     padding: 0.25rem 0.75rem;
     display: inline-block;
     border: 2px solid var(--border-color);
@@ -561,10 +562,10 @@ blockquote {
     text-transform: uppercase;
 }
 
-.article-tag:nth-child(1) { background-color: var(--accent-cyan); color: #000000; }
-.article-tag:nth-child(2) { background-color: var(--accent-pink); color: #FFFFFF; }
-.article-tag:nth-child(3) { background-color: var(--accent-lime); color: #000000; }
-.article-tag:nth-child(4) { background-color: var(--accent-purple); color: #FFFFFF; }
+.article-tag:nth-child(1) { background-color: var(--accent-cyan); color: var(--text-primary); }
+.article-tag:nth-child(2) { background-color: var(--accent-pink); color: var(--bg-card); }
+.article-tag:nth-child(3) { background-color: var(--accent-lime); color: var(--text-primary); }
+.article-tag:nth-child(4) { background-color: var(--accent-purple); color: var(--bg-card); }
 
 /* ========================================
    Post Page
@@ -594,7 +595,7 @@ blockquote {
 
 .post-meta span {
     background-color: var(--accent-cyan);
-    color: #000000;
+    color: var(--text-primary);
     padding: 0.5rem 1rem;
     border: 2px solid var(--border-color);
 }
@@ -608,7 +609,7 @@ blockquote {
     border: var(--border-width) solid var(--border-color);
     padding: 2rem 3rem;
     background-color: var(--accent-yellow);
-    color: #000000;
+    color: var(--text-primary);
     display: inline-block;
     box-shadow: 10px 10px 0 var(--border-color);
 }
@@ -640,10 +641,10 @@ blockquote {
     box-shadow: 4px 4px 0 var(--border-color);
 }
 
-.post-tag:nth-child(1) { background-color: var(--accent-cyan); color: #000000; }
-.post-tag:nth-child(2) { background-color: var(--accent-pink); color: #FFFFFF; }
-.post-tag:nth-child(3) { background-color: var(--accent-lime); color: #000000; }
-.post-tag:nth-child(4) { background-color: var(--accent-purple); color: #FFFFFF; }
+.post-tag:nth-child(1) { background-color: var(--accent-cyan); color: var(--text-primary); }
+.post-tag:nth-child(2) { background-color: var(--accent-pink); color: var(--bg-card); }
+.post-tag:nth-child(3) { background-color: var(--accent-lime); color: var(--text-primary); }
+.post-tag:nth-child(4) { background-color: var(--accent-purple); color: var(--bg-card); }
 
 /* Table of Contents */
 .toc-container {
@@ -707,7 +708,7 @@ blockquote {
 
 .toc a:hover {
     background-color: var(--accent-yellow);
-    color: #000000;
+    color: var(--text-primary);
 }
 
 /* Post Content */
@@ -764,7 +765,7 @@ blockquote {
 
 .post-content table th {
     background-color: var(--accent-yellow);
-    color: #000000;
+    color: var(--text-primary);
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -817,9 +818,9 @@ blockquote {
     box-shadow: 6px 6px 0 var(--border-color);
 }
 
-.share-btn:nth-child(1):hover { background-color: var(--accent-cyan); color: #000000; }
-.share-btn:nth-child(2):hover { background-color: var(--accent-pink); color: #FFFFFF; }
-.share-btn:nth-child(3):hover { background-color: var(--accent-lime); color: #000000; }
+.share-btn:nth-child(1):hover { background-color: var(--accent-cyan); color: var(--text-primary); }
+.share-btn:nth-child(2):hover { background-color: var(--accent-pink); color: var(--bg-card); }
+.share-btn:nth-child(3):hover { background-color: var(--accent-lime); color: var(--text-primary); }
 
 .post-author {
     background-color: var(--bg-card);
@@ -864,9 +865,9 @@ blockquote {
     box-shadow: 6px 6px 0 var(--border-color);
 }
 
-.author-links a:nth-child(1):hover { background-color: var(--accent-cyan); color: #000000; }
-.author-links a:nth-child(2):hover { background-color: var(--accent-pink); color: #FFFFFF; }
-.author-links a:nth-child(3):hover { background-color: var(--accent-lime); color: #000000; }
+.author-links a:nth-child(1):hover { background-color: var(--accent-cyan); color: var(--text-primary); }
+.author-links a:nth-child(2):hover { background-color: var(--accent-pink); color: var(--bg-card); }
+.author-links a:nth-child(3):hover { background-color: var(--accent-lime); color: var(--text-primary); }
 
 /* ========================================
    Loading & Empty States
@@ -951,7 +952,7 @@ blockquote {
    ======================================== */
 @media (max-width: 1200px) {
     .container {
-        max-width: 100%;
+        width: 90%;
         padding: 0 2rem;
     }
 
