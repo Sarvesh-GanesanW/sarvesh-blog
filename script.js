@@ -217,11 +217,23 @@ async function loadPost() {
             .join('');
         document.getElementById('post-content').innerHTML = html;
 
-        // Update meta tags
+        // Update meta tags for SEO and social sharing
+        const currentUrl = `https://sarvesh-ganesanw.github.io/sarvesh-blog/post.html?slug=${slug}`;
+
         document.title = `${article.title} - Sarvesh Ganesan`;
-        document.querySelector('meta[name="description"]').content = article.excerpt;
-        document.querySelector('meta[property="og:title"]').content = article.title;
-        document.querySelector('meta[property="og:description"]').content = article.excerpt;
+        document.getElementById('meta-description').content = article.excerpt;
+        document.getElementById('meta-keywords').content = article.tags.join(', ');
+        document.getElementById('canonical-url').href = currentUrl;
+
+        // Open Graph tags
+        document.getElementById('og-url').content = currentUrl;
+        document.getElementById('og-title').content = article.title;
+        document.getElementById('og-description').content = article.excerpt;
+        document.getElementById('article-published').content = new Date(article.date).toISOString();
+
+        // Twitter Card tags
+        document.getElementById('twitter-title').content = article.title;
+        document.getElementById('twitter-description').content = article.excerpt;
 
         // Apply syntax highlighting
         Prism.highlightAll();
