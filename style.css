@@ -39,31 +39,31 @@
     --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Mode Variables - Limited 5-color palette */
+/* Dark Mode Variables - Cohesive 5-color palette */
 body.dark-mode {
-    /* Color 1: Base background */
-    --bg-primary: #1E1E1E;
-    --bg-secondary: #262626;
-    --bg-card: #2A2A2A;
+    /* Color 1: Rich dark backgrounds (slightly warm) */
+    --bg-primary: #0F0F0F;
+    --bg-secondary: #1C1C1C;
+    --bg-card: #242424;
 
-    /* Color 2-3: Text shades */
-    --text-primary: #D4D4D4;
-    --text-secondary: #8A8A8A;
+    /* Color 2-3: Text with proper contrast */
+    --text-primary: #EBEBEB;
+    --text-secondary: #A0A0A0;
 
-    /* Color 4: Borders (subtle) */
-    --border-color: #404040;
+    /* Color 4: Visible but not harsh borders */
+    --border-color: #3D3D3D;
 
-    /* Color 5: Single accent (muted yellow-orange) */
-    --accent-yellow: #D4A574;
-    --accent-cyan: #A8A8A8;
-    --accent-pink: #9A9A9A;
-    --accent-lime: #AAAAAA;
-    --accent-purple: #B0B0B0;
-    --accent-orange: #C4B5A0;
+    /* Color 5: Warm amber accent family (intuitive hierarchy) */
+    --accent-yellow: #FFB84D;    /* Primary accent - warm amber */
+    --accent-cyan: #6DAFFF;      /* Cool complement for variety */
+    --accent-pink: #FF8C94;      /* Soft coral */
+    --accent-lime: #A8D582;      /* Muted sage green */
+    --accent-purple: #B08CFF;    /* Soft lavender */
+    --accent-orange: #FFA366;    /* Warm orange */
 
-    /* Reduce contrast overall */
+    /* Subtle elements */
     --border-width: 2px;
-    --shadow-offset: 3px;
+    --shadow-offset: 4px;
 }
 
 /* ========================================
