@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Sarvesh Ganesan">
+    <meta name="keywords" content="">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Loading...</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="post-page">
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress">
+        <div class="reading-progress-bar" id="reading-progress-bar"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header header-post">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Articles</span>
+                </a>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Article Loading State -->
+        <div id="loading-state" class="loading-container">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading article...</p>
+            </div>
+        </div>
+
+        <!-- Article Content -->
+        <article class="post-article" id="post-article" style="display: none;">
+            <div class="container-post">
+                <!-- Article Header -->
+                <header class="post-header">
+                    <div class="post-meta">
+                        <time class="post-date" id="post-date"></time>
+                        <span class="post-reading-time" id="post-reading-time"></span>
+                    </div>
+                    <h1 class="post-title" id="post-title"></h1>
+                    <p class="post-excerpt" id="post-excerpt"></p>
+                    <div class="post-tags" id="post-tags"></div>
+                </header>
+
+                <!-- Table of Contents -->
+                <aside class="toc-container" id="toc-container" style="display: none;">
+                    <div class="toc-header">
+                        <h3>Table of Contents</h3>
+                        <button class="toc-toggle" id="toc-toggle" aria-label="Toggle table of contents">
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                    </div>
+                    <nav class="toc" id="toc"></nav>
+                </aside>
+
+                <!-- Article Body -->
+                <div class="post-content" id="post-content"></div>
+
+                <!-- Article Footer -->
+                <footer class="post-footer">
+                    <div class="post-share">
+                        <h4>Share this article</h4>
+                        <div class="share-buttons">
+                            <a href="#" class="share-btn share-twitter" id="share-twitter" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="share-btn share-linkedin" id="share-linkedin" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="share-btn share-facebook" id="share-facebook" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="post-author">
+                        <div class="author-info">
+                            <h4>About the Author</h4>
+                            <p>
+                                <strong>Sarvesh Ganesan</strong> is an AI Research Engineer with 2+ years of experience
+                                building production ML systems. He specializes in MLOps, RAG systems, and cloud infrastructure.
+                            </p>
+                            <div class="author-links">
+                                <a href="https://sarvesh-ganesanw.github.io/sarvesh-portfolio/" target="_blank">Portfolio</a>
+                                <a href="https://github.com/Sarvesh-GanesanW" target="_blank">GitHub</a>
+                                <a href="https://linkedin.com/in/sarvesh-ganesan09" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Sarvesh Ganesan. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/Sarvesh-GanesanW" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/sarvesh-ganesan09" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:sarveshganesan2002@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-sql.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
