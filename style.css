@@ -39,14 +39,31 @@
     --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Mode Variables */
+/* Dark Mode Variables - Limited 5-color palette */
 body.dark-mode {
-    --bg-primary: #1A1A1A;
-    --bg-secondary: #2A2A2A;
-    --bg-card: #252525;
-    --text-primary: #E8E8E8;
-    --text-secondary: #B0B0B0;
-    --border-color: #D0D0D0;
+    /* Color 1: Base background */
+    --bg-primary: #1E1E1E;
+    --bg-secondary: #262626;
+    --bg-card: #2A2A2A;
+
+    /* Color 2-3: Text shades */
+    --text-primary: #D4D4D4;
+    --text-secondary: #8A8A8A;
+
+    /* Color 4: Borders (subtle) */
+    --border-color: #404040;
+
+    /* Color 5: Single accent (muted yellow-orange) */
+    --accent-yellow: #D4A574;
+    --accent-cyan: #A8A8A8;
+    --accent-pink: #9A9A9A;
+    --accent-lime: #AAAAAA;
+    --accent-purple: #B0B0B0;
+    --accent-orange: #C4B5A0;
+
+    /* Reduce contrast overall */
+    --border-width: 2px;
+    --shadow-offset: 3px;
 }
 
 /* ========================================
