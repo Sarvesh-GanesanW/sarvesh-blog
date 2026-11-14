@@ -6,6 +6,30 @@
 // Article metadata - Add your articles here
 const articles = [
     {
+        slug: 'hybrid-retrieval-rag-latency',
+        title: 'Cutting RAG Latency from ~10s to Under 1s with Hybrid Retrieval',
+        date: '2026-11-14',
+        excerpt: 'Vector and full-text search in one Postgres query, a neural reranker with a hard timeout, and OCR only for the pages that need it.',
+        tags: ['AI', 'RAG', 'Python'],
+        readingTime: '5 min read'
+    },
+    {
+        slug: 'cheaper-llm-calls-cost-ledger',
+        title: 'Making LLM Calls Cheaper Without Making Answers Worse',
+        date: '2026-11-13',
+        excerpt: 'Routing requests by complexity, caching prompts in four places, a per-call cost ledger with reserve-and-settle budgets, and moving background jobs to a lighter model.',
+        tags: ['AI', 'Python'],
+        readingTime: '5 min read'
+    },
+    {
+        slug: 'headroom-scaler-nodes-before-pods',
+        title: 'Adding Nodes Before Pods Exist: headroom-scaler',
+        date: '2026-11-12',
+        excerpt: 'A Kubernetes node autoscaler that keeps bin-packed headroom per PriorityClass, provisions declared demand ahead of time, and never evicts or binds a pod.',
+        tags: ['Kubernetes', 'AWS', 'Python'],
+        readingTime: '5 min read'
+    },
+    {
         slug: 'building-production-rag-systems',
         title: 'Building Production RAG Systems: Lessons from 10K+ Daily Queries',
         date: '2025-01-15',
