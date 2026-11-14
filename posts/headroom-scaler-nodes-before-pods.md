@@ -39,6 +39,8 @@ Inside, it is first-fit-decreasing bin packing. The items are pending pods first
 
 The number of new bins opened is exactly the number of nodes to add, capped per step and by the pool maximum. Packing on cpu, memory and the node's pod count together is what makes "a slot fits on one node" true. Slots of a higher-priority class are packed first, so when the pool hits its maximum, the important headroom is the part that survives.
 
+<figure class="js-figure" data-figure="headroom-demand"></figure>
+
 Two details keep it from overshooting. In-flight instances count as full capacity until a provisioning timeout, so a burst seen in two consecutive passes adds nodes once. And pending pods may only be placed on nodes that became usable in the last 60 seconds; on older nodes the scheduler has already said no, while a just-ready node is about to receive them.
 
 ## What it refuses to do
